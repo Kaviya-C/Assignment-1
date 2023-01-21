@@ -1,0 +1,179 @@
+
+
+                                                                               Assignment-1
+                                                                                            Date given:31-12-2022
+                                                                                            Completed Date:02:01:2023
+                                                                                             By: Kaviya.C
+                                                                                    --------------------------------
+
+                     1.what is java?
+                                  Ans: Java is widely used programming language.Because it supports Internet application,
+                                          Mobile apps,system application.Java comes from primarily in C++.I need programming
+                                          language that supports all os,compiler and that language must be efficient,safety and also
+                                          extensibility(linux prog-->windows--->Mac)
+                                                                 Founder:James Gosling 
+                                                                 Time Period:1.5 years for first version ,1992
+                                                                 Named :Oak
+                                                                 Changed as: Java in 1995
+                                          Java is a compiled and interpreted language open source,portability(windows-8--10--11),
+                                          high security,
+
+                     compiler--->translate into machine lang--->Intermediate lang(byte code(.class file))--->machine lang
+
+                     [java development kit]compilation time--------------->.java program to .class file/shows syntax error
+
+		        Compiler-->whole program translator
+                                          Interpreter-->line by line execution
+                                          portability--->same code works on multiple devices with different versions
+
+
+
+                     2.Explain all the java features in one or two lines.
+                              Ans:secured(not able to hack bcoz of java has 2 level of translation--->.java--->.class--->.exe),
+                                     portable,robust,object-oriented, java is distributed (transfer the application/tcp/rmi)
+
+                                     high performance,(one person written /compiled that class file used other user then user
+                                     need not compile the application ,it is enough to use only the application in JRE)
+
+                                     platform independent(write once run anywhere any time forever[WORA]
+                                                             .class-->window/mac---JRE--game play))
+
+
+                     3.In which folder can we find the javac,java,javah,javarmi commands?
+                              Ans:Inside of  jdk --->bin folder---> we can see the javac,java,javah,java-rmi
+
+
+                     4.what all the environment variables to set to run the java programs through command prompt?
+                            Ans: step:1 download the jdk latest version
+                                    step:2 create a sepearte folder to store my program
+                                    step:3 find out the bin folder copy the path until the bin
+                                              [example c:/program files/java/jdk17.0.1/bin]
+                                    step:4 open cmd ,if another drive mean use cd to change the directory
+                                            [c:/java_folder>set path=c:/program files/java/jdk17.0.1/bin] 
+                                    press enter then type javac  then enter all the command/arguments of javac are displayed
+
+
+                    5.what are the rules of naming the class
+                          Ans: class name should be noun/descibe the things,first letter/character should be capitalized
+                                   don't use keywords as class name
+                                  Allowed characters, underscore(_),dollar$ ,digit 0to9.
+                                  Avoid abbreviation/acronymns as a class name
+                                  class name is an identifier it should not start with digits and it does not contain spaces
+                                  java classname is unlimited(windows(260 characters),(unix(255)))
+                   note: class name as same as file name without changing the lettercase(upper,lower)
+
+
+                    6.which is the main entry point of java program
+                         Ans: Entry point: java main() method----> public static void main(String[],args)
+                                1. class-->collection of object/blueprint/template/college
+                                2. method--->activity(classroom,lab,canteen,auditorium ,etc)
+                                3. main---->important--->college should be reopened/gate opened
+                                            [.java--->.class(jvm)--->starts main method]
+                               
+                                 * inside the class only main method present
+
+                                 static---keyword /
+                                 object-->combination of state and behaviour 
+                                 class--->state and behaviour
+
+                    when we use static keyword--whenever jdk saw the static then jdk understands as
+                    static is one of the method in main it means this don't need object.it is class member/class behaviour
+                    static members associated with class.it is common to all the objects
+                    without object we can run the program bcoz of static keyword 
+                                      
+                  public---->access modifier/entire program /to call by jvm for run anywhere
+                  static----->direct access wtihout object /we can accessing main method directly by using the static
+                  void------>return to jvm only so i don't want to return anything for jvm so use void
+                  main---->name of the function/iside jvm
+                  String[],args--->command line arguments
+
+                           * at runtime jvm unable to find the main method or mistakes in main() method
+                              it throws NoSuchMethodError:main  
+                                           we can also made some changes in : 
+                                                 *static public 
+                                                 *void main(String args[])/void main(String []args)
+                                                 *instead of args we can take any valid java identifier examp(x,y,v)
+                                                 *replace as String[] as main(String...args)
+                                                 *final modifier/synchronized/strictfp in main method possible 
+
+                    7.components of java program are?
+                             Ans: module package,class definition,main method,variables, java statement
+
+
+                    8.what is jvm,jre,jdk? 
+                       Ans: JDK---->java development kit,it is platform independent(if error not present mean 
+                               it just convert the[ .java prog to .class])(compiler/compilation time/platform independent)
+                                (JRE+developer tool)  (JDK comes with JRE...)
+
+                               JVM:java virtual machine,it is platform dependent,JIT compiler is one of the part/tool in Jvm
+                               jvm decides what the platform is,it  may be 32 bit, 64 bit for that specification jvm will set the 
+                               compiler so this is the role in jvm [.class file into binary language(0's,1's)]
+                               jvm used to load the class files
+ 
+                               JRE: java runtime environment , java virtual machine is in jre,it provides the runtime
+                               environment for running the program[.exe file] (JVM+library classes)
+
+
+                    9.Explain the components of compile time environments and run time environments.
+                             Ans:  Compile time environment: JDK
+                                      components inside JDK: jconsole,jar,jstack,etc
+                                     
+                                    Run Time Environment: JRE/JVM
+                                    loading the code,verify the code,execute the code
+                                    components inside the JRE: applet support classes ,java extension files, DLL files code libraries
+
+
+                   10.what is JIT?
+                         JIT:just in time compiler---> .class file converted into binary(0's,1's) for that purpose we use 
+                         another compiler.This compiler converts each line by line as machine laguage(interpreter/platform
+                         dependent(os+processor)  JIT inside of Java Virtual Machine
+                         
+
+
+                   11.different types of memory in jvm.
+                            Ans:5 memory areas  in jvm
+                            method area/static area:static variables/static methods/non-static method are stored/class files stored
+                            heap area      :object creation/non-static variables are stored/objects stored
+                            java stack area: execution happen in this area/local variables/intermediate operation stored
+                            pc/program counter register:non-native methods/return address/native pointer
+                            native method stack:
+
+
+                   12.In which area .class is stored?
+                           Ans:neither heap nor stack---->method area
+
+
+                   13.In which area object are stored?
+                             Ans:heap area
+
+
+                   14.Why do we call as java simple?
+                             Ans:java syntax is usually easier for new learner
+ 		  Easy to create and implement
+                                     syntax based on c and c++
+
+
+                   15.Why java is platform independent explain?
+                             Ans:java is  platform independent(write once run anywhere any time forever[WORA]
+                                                             .class-->window/mac---JRE--game play))
+
+                   16.Is jvm platform dependent??
+                          Ans:
+	               jvm decides what the platform is,it  may be 32 bit, 64 bit for that specification jvm will set the 
+                               compiler so this is the role in jvm
+
+	             JVM:java virtual machine,it is platform dependent,JIT compiler is one of the part/tool in Jvm
+                                 JIT:just in time compiler---> .class file converted into binary(0's,1's) for that purpose we use 
+                         another compiler.This compiler converts each line by line as machine laguage(interpreter/platform
+                         dependent(os+processor)  JIT inside of Java Virtual Machine
+
+                   17.Is java case sensitive?
+   	         Ans: yes  
+                          example: count is not same as Count //car in class name is not same as Car
+
+
+                   18.Is java complete object Oriented programming language?
+                          Ans: No it is not purely object oriented programming language
+  	         it also supports primitive data types:int bool long float char etc which are not objects
+
+
